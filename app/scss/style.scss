@@ -286,6 +286,7 @@
         padding-bottom: 26px;
         margin-bottom: 26px;
         position: relative;
+        @extend %title-font;
         &::after{
             content: '';
             position: absolute;
@@ -311,6 +312,7 @@
         padding-bottom: 25px;
         margin-bottom: 25px;
         position: relative;
+        @extend %title-font;
         &::after{
             content: '';
             position: absolute;
@@ -372,6 +374,7 @@
         padding-bottom: 19px;
         margin-bottom: 19px;
         position: relative;
+        @extend %title-font;
         &::after{
             content: '';
             position: absolute;
@@ -388,5 +391,115 @@
         font-weight: 600;
         font-size: 14px;
         color: #707070;
+    }
+}
+
+.decor {
+    padding: 170px 0 155px;
+    background-image: url(../images/decor-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__title {
+        max-width: 730px;
+        color: $title;
+        font-size: 60px;
+        line-height: 80px;
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+        position: relative;
+        @extend %title-font;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0 auto;
+            width: 200px;
+            height: 1px;
+            background-color: #6D7278;
+        }
+    }
+    &__text {
+        max-width: 540px;
+    }
+}
+
+.works-path {
+    padding: 80px 0 30px;
+    &__title {
+        @extend %title-font;
+        color: $title;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 36px;
+        line-height: 51px;
+    }
+    &__items {
+    }
+    &__items-box {
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 2px solid rgba($title, .7);
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            background-color: $title;
+}
+    }
+    &__item {
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items:center;
+        position: relative;
+    }
+    &__item--production{
+        margin-left: 317px;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 2px;
+            height: 20px;
+            background-color: rgba($title, .7);
+        }
+    }
+    &__item--production,
+    &__item--consultation{
+        padding-bottom: 38px;
+    }
+    &__item--measuring{
+        padding-top: 38px;
+        margin-left: 305px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 20px;
+            background-color: rgba($title, .7);
+        }
+    }
+    &__item-img {
+    }
+    &__item-title {
+        margin-left: 13px;
+        color: $title;
+        @extend %title-font;
+    }
+    &__item-text {
+        margin-top: 13px;
     }
 }
